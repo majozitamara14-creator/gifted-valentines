@@ -1,500 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifted - Valentine's Day Gift Bags 2026</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gifted - Valentine's Day 2026</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ffccd5 0%, #ffe6eb 50%, #ffffff 100%);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+<style>
+/* FONTS */
+.logo { font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; }
+h1, h2, h3 { font-family: serif; }
+p, li { font-family: cursive; }
 
-        /* Floating hearts animation */
-        .hearts-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
+/* SMOOTH SCROLLING */
+html { scroll-behavior: smooth; }
 
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            opacity: 0;
-            animation: float-up 8s infinite;
-        }
+/* GENERAL */
+body {
+    margin: 0;
+    background: #ffd6e0;
+    text-align: center;
+    padding-top: 80px; /* Space for fixed navbar */
+}
 
-        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .heart:nth-child(2) { left: 25%; animation-delay: 2s; }
-        .heart:nth-child(3) { left: 40%; animation-delay: 4s; }
-        .heart:nth-child(4) { left: 55%; animation-delay: 1s; }
-        .heart:nth-child(5) { left: 70%; animation-delay: 3s; }
-        .heart:nth-child(6) { left: 85%; animation-delay: 5s; }
+/* TOP NAVIGATION BAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f8c8d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-bottom: 3px solid black;
+}
 
-        @keyframes float-up {
-            0% {
-                bottom: -50px;
-                opacity: 0;
-                transform: translateX(0) rotate(0deg);
-            }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                bottom: 100%;
-                opacity: 0;
-                transform: translateX(100px) rotate(360deg);
-            }
-        }
+.navbar a {
+    text-decoration: none;
+    color: #ff2e63;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: cursive;
+    transition: 0.3s;
+}
 
-        /* Main container */
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.navbar a:hover {
+    color: black;
+    transform: scale(1.1);
+}
 
-        /* Header */
-        header {
-            text-align: center;
-            padding: 40px 20px 20px;
-            animation: fade-in 1s ease-out;
-        }
+/* FLOATING HEARTS */
+.heart {
+    position: fixed;
+    color: #ff4d6d;
+    animation: float 6s linear infinite;
+    font-size: 20px;
+    pointer-events: none;
+}
 
-        .logo {
-            font-family: 'Script MT Bold', 'Brush Script MT', cursive;
-            font-size: 72px;
-            color: #e91e63;
-            text-shadow: 3px 3px 0px #000,
-                         4px 4px 0px rgba(0,0,0,0.3);
-            margin-bottom: 10px;
-            animation: bounce-in 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
 
-        .tagline {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            font-size: 24px;
-            color: #d81b60;
-            margin-bottom: 10px;
-        }
+/* HEADER */
+header {
+    background: #f8c8d3;
+    padding: 60px 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    border: 4px solid black;
+    border-radius: 30px;
+    position: relative;
+}
 
-        .years {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            font-size: 18px;
-            color: #000;
-            background: #fff;
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+.logo {
+    font-size: 120px;
+    color: #ff2e63;
+    text-shadow: 4px 4px black;
+    margin-bottom: 10px;
+    line-height: 1;
+}
 
-        @keyframes bounce-in {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+.tagline {
+    font-family: cursive;
+    font-size: 32px;
+    color: #ff2e63;
+    margin-bottom: 20px;
+}
 
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.badges {
+    display: inline-flex;
+    gap: 10px;
+    background: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 3px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: cursive;
+    font-size: 18px;
+    margin-top: 10px;
+}
 
-        /* Hero section */
-        .hero {
-            background: linear-gradient(135deg, #ff4081 0%, #f50057 100%);
-            border-radius: 30px;
-            padding: 50px 40px;
-            margin: 30px 0;
-            box-shadow: 0 10px 40px rgba(233, 30, 99, 0.4);
-            border: 4px solid #000;
-            position: relative;
-            overflow: hidden;
-            animation: slide-up 0.8s ease-out 0.3s both;
-        }
+.badges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
+/* BORDER CARD STYLE */
+.card {
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+}
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+/* VALENTINES SECTION */
+.valentine {
+    background: linear-gradient(135deg, #ff2e63, #ff6b9d);
+    color: white;
+}
 
-        @keyframes slide-up {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.valentine h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+.valentine p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
-        .hero h2 {
-            font-family: 'Script MT Bold', 'Brush Script MT', cursive;
-            font-size: 48px;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 25px;
-            text-shadow: 3px 3px 0px #000;
-        }
+/* ABOUT SECTION */
+.about {
+    background: #ffe5ec;
+}
 
-        .hero p {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            font-size: 20px;
-            color: #fff;
-            text-align: center;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
+.about h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
 
-        /* About section */
-        .about {
-            background: #fff;
-            border-radius: 25px;
-            padding: 40px;
-            margin: 30px 0;
-            border: 3px solid #000;
-            box-shadow: 8px 8px 0px #ff4081;
-            animation: slide-up 0.8s ease-out 0.5s both;
-        }
+.about p {
+    font-size: 20px;
+    line-height: 1.8;
+}
 
-        .about h3 {
-            font-family: 'Script MT Bold', 'Brush Script MT', cursive;
-            font-size: 42px;
-            color: #e91e63;
-            text-align: center;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-        }
+/* PACKAGES SECTION */
+section {
+    padding: 60px 20px;
+    scroll-margin-top: 80px;
+}
 
-        .about p {
-            font-family: 'Handwriting', 'Brush Script MT', 'Script MT Bold', cursive;
-            font-size: 18px;
-            color: #333;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.section-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
 
-        /* Pricing section */
-        .pricing {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
+/* PACKAGES GRID - HORIZONTAL LAYOUT */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-        .price-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 30px;
-            border: 3px solid #000;
-            text-align: center;
-            animation: slide-up 0.8s ease-out both;
-            position: relative;
-        }
+/* PACKAGE CARD */
+.package-card {
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 30px;
+    transition: 0.3s;
+}
 
-        .price-card:nth-child(1) {
-            animation-delay: 0.6s;
-            box-shadow: 6px 6px 0px #ffb3c1;
-        }
+.package-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
 
-        .price-card:nth-child(2) {
-            animation-delay: 0.7s;
-            box-shadow: 6px 6px 0px #ff8fab;
-        }
+.package-card h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
 
-        .price-card:nth-child(3) {
-            animation-delay: 0.8s;
-            box-shadow: 6px 6px 0px #ff4081;
-        }
+.package-card .price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
 
-        .price-card:nth-child(4) {
-            animation-delay: 0.9s;
-            box-shadow: 6px 6px 0px #f50057;
-        }
+.package-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 400px;
+}
 
-        .price-card h4 {
-            font-family: 'Script MT Bold', 'Brush Script MT', cursive;
-            font-size: 36px;
-            color: #e91e63;
-            margin-bottom: 15px;
-        }
+.package-card ul li {
+    font-size: 20px;
+    padding: 10px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
 
-        .price-card .price {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            font-size: 28px;
-            color: #000;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+.order-btn {
+    background: black;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: cursive;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
 
-        .price-card p {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            font-size: 16px;
-            color: #666;
-        }
+.order-btn:hover {
+    background: #ff2e63;
+    transform: scale(1.1);
+}
 
-        /* Important notice */
-        .notice {
-            background: #000;
-            color: #fff;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 30px 0;
-            text-align: center;
-            border: 3px solid #ff4081;
-            animation: slide-up 0.8s ease-out 1s both;
-        }
+/* PACKAGE COLOR THEMES */
+.sweet-crush {
+    background: #ffb6d9;
+}
 
-        .notice h3 {
-            font-family: 'Calligraphy', 'Lucida Calligraphy', 'Monotype Corsiva', cursive;
-            font-size: 42px;
-            color: #ff4081;
-            margin-bottom: 15px;
-        }
+.love-vibes {
+    background: #ff6b9d;
+    color: white;
+}
 
-        .notice p {
-            font-family: 'Calligraphy', 'Lucida Calligraphy', 'Monotype Corsiva', cursive;
-            font-size: 24px;
-            line-height: 1.6;
-        }
+.heart-throb {
+    background: #c44569;
+    color: white;
+}
 
-        /* CTA Button */
-        .cta-section {
-            text-align: center;
-            margin: 50px 0;
-            animation: slide-up 0.8s ease-out 1.2s both;
-        }
+.ultimate-love {
+    background: black;
+    color: white;
+}
 
-        .order-button {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            display: inline-block;
-            background: #e91e63;
-            color: #fff;
-            font-size: 36px;
-            padding: 30px 80px;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 4px solid #000;
-            box-shadow: 8px 8px 0px #000;
-            transition: all 0.3s ease;
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-        }
+.galentines {
+    background: #ffccb3;
+}
 
-        .order-button::before {
-            content: '💝';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            transition: left 0.3s ease;
-        }
+.luxury-galentines {
+    background: #ffe0cc;
+}
 
-        .order-button:hover {
-            background: #f50057;
-            transform: translate(-4px, -4px);
-            box-shadow: 12px 12px 0px #000;
-        }
+.secret-admirer {
+    background: #8b1538;
+    color: white;
+}
 
-        .order-button:hover::before {
-            left: 20px;
-        }
-
-        .order-button:active {
-            transform: translate(0, 0);
-            box-shadow: 4px 4px 0px #000;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            animation: fade-in 1s ease-out 1.4s both;
-        }
-
-        footer p {
-            font-family: 'Comic Sans MS', 'Kristen ITC', cursive;
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .hearts-divider {
-            color: #ff4081;
-            font-size: 24px;
-            margin: 20px 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 48px;
-            }
-
-            .tagline {
-                font-size: 18px;
-            }
-
-            .hero h2 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .about h3 {
-                font-size: 32px;
-            }
-
-            .about p {
-                font-size: 16px;
-            }
-
-            .order-button {
-                font-size: 22px;
-                padding: 18px 40px;
-            }
-
-            .pricing {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    
+    .navbar a {
+        font-size: 14px;
+    }
+    
+    .logo {
+        font-size: 60px;
+    }
+    
+    .tagline {
+        font-size: 20px;
+    }
+    
+    .badges {
+        flex-direction: column;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    .badges span:nth-child(2) {
+        display: none;
+    }
+    
+    .valentine h1 {
+        font-size: 35px;
+    }
+    
+    .valentine p {
+        font-size: 16px;
+    }
+    
+    .about h1 {
+        font-size: 35px;
+    }
+    
+    .about p {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 35px;
+    }
+    
+    .package-card h2 {
+        font-size: 30px;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
+
 <body>
-    <!-- Floating hearts background -->
-    <div class="hearts-container">
-        <div class="heart">❤️</div>
-        <div class="heart">💕</div>
-        <div class="heart">💖</div>
-        <div class="heart">💗</div>
-        <div class="heart">💝</div>
-        <div class="heart">💘</div>
+
+<!-- Floating Hearts -->
+<div class="heart" style="left: 10%; animation-delay: 0s;">💖</div>
+<div class="heart" style="left: 30%; animation-delay: 2s;">💕</div>
+<div class="heart" style="left: 50%; animation-delay: 1s;">💗</div>
+<div class="heart" style="left: 70%; animation-delay: 3s;">💖</div>
+<div class="heart" style="left: 85%; animation-delay: 1.5s;">💕</div>
+
+<!-- Top Navigation Bar -->
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#packages">Packages</a>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+    <header>
+        <div class="logo">Gifted</div>
+        <p class="tagline">For Every Main-Character Moment</p>
+        <div class="badges">
+            <span>💕 Teen-owned</span>
+            <span>•</span>
+            <span>🤎 Affordable & Made with Love</span>
+        </div>
+    </header>
+
+    <!-- Valentines Intro -->
+    <div class="card valentine">
+        <h1>Valentine's Day 2026 💕</h1>
+        <p>Love is in the air, and we're here to help you celebrate it in the sweetest way possible!</p>
+        <p>Whether you're surprising your crush, treating your bestie, or showing mom some love, we've got the perfect gift bag waiting for you!</p>
     </div>
+</section>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1 class="logo">Gifted</h1>
-            <p class="tagline">For Every Main-Character Moment</p>
-            <div class="years">📍Teen-owned • 📦 Affordable & Made with Love</div>
-        </header>
+<!-- ABOUT SECTION -->
+<section id="about">
+    <div class="card about">
+        <h1>What We're All About 💖</h1>
+        <p>Hey there, lovely people! Welcome to Gifted – where we're all about creating smiles and spreading joy! We're not just about gift bags; we're about creating those special moments that make hearts flutter and faces light up.</p>
+        <p>Every bag we create is packed with love, care, and all the good vibes! From cute treats to adorable surprises, we handpick everything to make your special someone feel absolutely cherished. Because let's be real – everyone deserves to feel special, especially on Valentine's Day!</p>
+        <p>We know life gets busy, so we make it super easy for you. Just pick your perfect package, fill out our simple order form, and we'll handle the rest. No stress, just pure excitement knowing you're about to make someone's day absolutely incredible! 🌟</p>
+    </div>
+</section>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Valentine's Day 2026 💕</h2>
-                <p>Love is in the air, and we're here to help you celebrate it in the sweetest way possible!</p>
-                <p>Whether you're surprising your crush, treating your bestie, or showing mom some love, we've got the perfect gift bag waiting for you!</p>
-            </div>
-        </section>
+<!-- PACKAGES SECTION -->
+<section id="packages">
+    <h1 class="section-title">Our Packages 🎁</h1>
 
-        <!-- About Section -->
-        <section class="about">
-            <h3>What We're All About 💖</h3>
-            <p>Hey there, lovely people! Welcome to Gifted – where we're all about creating smiles and spreading joy! We're not just about gift bags; we're about creating those special moments that make hearts flutter and faces light up.</p>
-            <p>Every bag we create is packed with love, care, and all the good vibes! From cute treats to adorable surprises, we handpick everything to make your special someone feel absolutely cherished. Because let's be real – everyone deserves to feel special, especially on Valentine's Day!</p>
-            <p>We know life gets busy, so we make it super easy for you. Just pick your perfect package, fill out our simple order form, and we'll handle the rest. No stress, just pure excitement knowing you're about to make someone's day absolutely incredible! 🌟</p>
-        </section>
-
-        <!-- Pricing Section -->
-        <h3 style="font-family: 'Script MT Bold', cursive; font-size: 42px; color: #e91e63; text-align: center; margin: 40px 0 30px;">Choose Your Love Package 💝</h3>
-        <div class="pricing">
-            <div class="price-card">
-                <h4>Sweet Crush</h4>
-                <div class="price">R100-R150</div>
-                <p>Perfect for new crushes and sweet gestures!</p>
-            </div>
-            <div class="price-card">
-                <h4>Love Vibes</h4>
-                <div class="price">R200-R250</div>
-                <p>Show them you really care with this delightful package!</p>
-            </div>
-            <div class="price-card">
-                <h4>Heart Throb</h4>
-                <div class="price">R300</div>
-                <p>Go big with this amazing collection of goodies!</p>
-            </div>
-            <div class="price-card">
-                <h4>Ultimate Love</h4>
-                <div class="price">R350+</div>
-                <p>Pull out all the stops with our premium package!</p>
-            </div>
+    <div class="packages-grid">
+        <!-- Sweet Crush -->
+        <div class="package-card sweet-crush">
+            <h2>Sweet Crush 💕</h2>
+            <p class="price">R120</p>
+            <ul>
+                <li>Chocolate 🍫</li>
+                <li>Letter 💌</li>
+                <li>Rose Set 🌹</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Sweet Crush')">Order Now</button>
         </div>
 
-        <!-- Important Notice -->
-        <section class="notice">
-            <h3>⏰ Important Reminder! ⏰</h3>
-            <p>To make sure your Valentine's gift is absolutely perfect, we need at least 3 DAYS notice before the special day!</p>
-            <p>So don't wait until the last minute – order now and guarantee those happy smiles! 😊</p>
-        </section>
+        <!-- Love Vibes -->
+        <div class="package-card love-vibes">
+            <h2>Love Vibes 💖</h2>
+            <p class="price">R200</p>
+            <ul>
+                <li>Chocolate 🍫</li>
+                <li>Letter 💌</li>
+                <li>Teddy 🧸</li>
+                <li>Rose Set 🌹</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Love Vibes')">Order Now</button>
+        </div>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScuFThSeMi7QaAb9IWy2KoJhmGzwjqk7CxUbT12LCDEllng_A/viewform?usp=header" class="order-button" target="_blank">Order Your Gift Bag Now!</a>
-            <p style="font-family: 'Comic Sans MS', cursive; color: #666; margin-top: 20px; font-size: 24px; font-weight: bold;">Click the button above to fill out our quick order form! 💌</p>
-        </section>
+        <!-- Heart Throb -->
+        <div class="package-card heart-throb">
+            <h2>Heart Throb 💗</h2>
+            <p class="price">R300</p>
+            <ul>
+                <li>Jewelry 💎</li>
+                <li>Rose Set 🌹</li>
+                <li>Letter 💌</li>
+                <li>Teddy 🧸</li>
+                <li>Chocolate 🍫</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Heart Throb')">Order Now</button>
+        </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="hearts-divider">💕 ❤️ 💖 💗 💝 💘 💕</div>
-            <p>Gifted - Making your special occasions unforgettable!</p>
-            <p>Spread the love and share the joy! ✨</p>
-            <p style="margin-top: 20px; font-size: 14px;">💝 Valentine's Day 2026 💝</p>
-        </footer>
+        <!-- Ultimate Love -->
+        <div class="package-card ultimate-love">
+            <h2>Ultimate Love 🖤</h2>
+            <p class="price">R380</p>
+            <ul>
+                <li>Letter 💌</li>
+                <li>Chocolate 🍫</li>
+                <li>Rose Display 🌹</li>
+                <li>Stuffed Animal 🧸</li>
+                <li>Perfume 🌸</li>
+                <li>Jewelry 💎</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Ultimate Love')">Order Now</button>
+        </div>
+
+        <!-- Galentines -->
+        <div class="package-card galentines">
+            <h2>Galentines 💅</h2>
+            <p class="price">R150</p>
+            <ul>
+                <li>Face Mask 🧖‍♀️</li>
+                <li>Lip Gloss 💄</li>
+                <li>Press On Nails 💅</li>
+                <li>Matching Bracelets 📿</li>
+                <li>Sweets 🍬</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Galentines')">Order Now</button>
+        </div>
+
+        <!-- Luxury Galentines -->
+        <div class="package-card luxury-galentines">
+            <h2>Luxury Galentines 🌸</h2>
+            <p class="price">R210</p>
+            <ul>
+                <li>2 Face Masks 🧖‍♀️</li>
+                <li>Lip Gloss 💄</li>
+                <li>Press On Nails 💅</li>
+                <li>Perfume 🌸</li>
+                <li>Jewelry 💎</li>
+                <li>Sweets 🍬</li>
+                <li>Notebook 📓</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Luxury Galentines')">Order Now</button>
+        </div>
+
+        <!-- Secret Admirer -->
+        <div class="package-card secret-admirer">
+            <h2>Secret Admirer 🌹</h2>
+            <p class="price">R30 (+R5 for anonymous delivery)</p>
+            <ul>
+                <li>Single Rose 🌹</li>
+                <li>Letter 💌</li>
+                <li>Anonymous Delivery Option 🔒</li>
+            </ul>
+            <button class="order-btn" onclick="orderNow('Secret Admirer')">Order Now</button>
+        </div>
     </div>
+</section>
+
+<script>
+function orderNow(packageName) {
+    // Replace this URL with your actual Google Form URL
+    const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLScuFThSeMi7QaAb9IWy2KoJhmGzwjqk7CxUbT12LCDEllng_A/viewform';
+    window.open(formURL, '_blank');
+}
+</script>
+
 </body>
 </html>
